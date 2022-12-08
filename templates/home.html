@@ -2,12 +2,25 @@
 <html>
   <head>
     <style>
+      .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+      }
+      .button1 {border-radius: 12px}
+      .button2 {border-radius: 12px}
     body {
         background-color: rgb(40, 120, 210);
         color: rgb(240, 248, 255);
         font-family: "Helvetica", "Arial", sans-serif;
         font-size: 1.3em;
         text-align: center
+      
     }
 
     a {
@@ -19,7 +32,8 @@
     <h1>Welcome to the House Database!</h1>
     <p> Here, you will be able to input houses that you are selling, or seek out your dream home! Please be mindful that this database is local, and only shows listings that have been sent to our database. Thank you!</p>
 
-    <button onclick="location.href='https://CSIIGroupProject.maizebooker1.repl.co/list'"'>List a House</button>
-    <button onclick="location.href='https://CSIIGroupProject.maizebooker1.repl.co/find'">Find a Home</button>
+    <button class= "button button1"
+onclick="location.href='https://CSIIGroupProject.maizebooker1.repl.co/list'"'>List a House</button>
+    <button class= "button button2" onclick="location.href='https://CSIIGroupProject.maizebooker1.repl.co/find'">Find a Home</button>
   </body>
 </html>
