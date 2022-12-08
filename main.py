@@ -13,6 +13,7 @@ def get_entries():
 
   if key == 0:
     db["house_listings"] = {}
+
     
   for entry in db["house_listings"]:
     entries += 1
