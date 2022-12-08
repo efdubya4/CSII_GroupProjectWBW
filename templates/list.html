@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <!--name, location, area, price, bedrooms, bathrooms, multiple stories-->
+  <h1>Listing A Home</h1>
+  <h2>Please fill out all of the information that is requested.</h2>
+
+  
+  <form action="{{ url_for("list_homes")}}" method="post">
+
+  
+    
+    <label for="seller_name">Your Name:</label><br>
+    <input type="text" id="seller_name" name="seller_name"><br>
+    
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location"><br>
+    
+    <label for="area">Area:</label><br>
+    <select name="areas" id="areas">
+      <option value="city">City</option>
+      <option value="rural">Rural</option>
+      <option value="suburban">Suburban</option>
+      <option value="metropolitan">Metropolitan</option>
+    </select> <br>
+
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price"><br>
+
+    <label for="bedrooms">Number of Bedrooms:</label> <br>
+    <input type="number" id="bedrooms" name="bedrooms"> <br>
+
+    <label for="bathrooms">Number of Bathrooms:</label> <br>
+    <input type="number" id="bathrooms" name="bathrooms"> <br>
+
+    <label for="stories">Does this house have multiple stories?</label> <br>
+    <input type="checkbox" id="stories" name="yes_stories">
+    <label for="yes_stories">Yes</label><br>
+
+    <input type="checkbox" id="stories" name="no_stories">
+    <label for="no_stories">No</label><br><br>
+    
+      <form-data>
+        <label for="image">Street-View Image:</label> <br>
+        <input type = "file" id = "image" name = image> <br><br>
+      </form-data>
+    
+    <button type="submit">List Your Home!</button>    
+  </form>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Find Your Home Today!</title>
+  </head>
+
+  <style type="text/css">
+      
+    th:tr{
+        color: blue;
+  
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+  
+    }
+  
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+
+  <body>
+    <h1>Listed Homes:</h1>
+    
+  <table style="margin-left: 20px;">
+    <!-- table headers -->
+    <th> 
+      <tr style="color: green; ">
+      <td>Seller's Name</td>
+      <td>Location</td>
+      <td>Type of Area</td>
+      <td># of Bedrooms</td>
+      <td># Bathrooms</td>
+      <td>Price</td>
+      <td>Image:</td>
+  </tr>
+    </th>
+
+    <!-- for loop logic of jinga template -->
+    {%for i in range(1, len+1)%}
+      {% set curEntry = i | string() %}
+      {% set entry = 'entry' ~ curEntry %}
+    <!-- table rows -->
+    <tr>
+        <td>{{listed_homes[entry]['name']}}</td>
+        <td>{{listed_homes[entry]['location']}}</td>
+        <td>{{listed_homes[entry]['area']}}</td>
+        <td>{{listed_homes[entry]['price']}}</td>
+        <td>{{listed_homes[entry]['num_bedrooms']}}</td>
+        <td>{{listed_homes[entry]['num_bathrooms']}}</td>
+      {%endfor%}
+      
+    </tr>
+  </table>
+
+    
+  </body>
+</html>
